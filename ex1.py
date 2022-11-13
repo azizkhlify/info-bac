@@ -22,7 +22,9 @@ def remplir1(n):
 def remplir2 (n):
     t=array([str]*n)
     for i in range (n):
-        t[i]=chr(randint(ord('a'),ord('z')))
+        t[i]=str(input('case '+str(i+1)+' :'))
+        while not(len(t[i])==1 and ord('a')<=ord(t[i])<=ord('z')):
+            t[i]=str(input('case '+str(i+1)+' :'))
     return t
 def afichier ():
     t3=array([str]*n)
@@ -35,7 +37,5 @@ n=saisir()
 t1=remplir1(n)
 print('t2 -------------------')
 t2=remplir2(n)
-for i in range (n):
-    print(t2[i])
 print('t3 -------------------')
 afichier()
