@@ -1,4 +1,3 @@
-
 def mawjoud (a,t):
     b=False;k=0
     while k<len(t) and not(b):
@@ -17,10 +16,11 @@ def anag (a,b):
             
         else :
             t=not(t)
-    return t
+    return t and len(a)==len(b)
 #pp
 ch1=str(input('ch1 :'))
 ch2=str(input('ch2 :'))
-print (anag(ch1,ch2))
-            
-    
+if (anag(ch1,ch2)):
+    print(ch1,'et',ch2,'sont anagrammes')
+else :
+    print(ch1,'et',ch2,'ne sont pas anagrammes')
